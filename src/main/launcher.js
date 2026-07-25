@@ -1,8 +1,25 @@
 const fs = require('fs');
-const { Version, launch, createMinecraftProcessWatcher, createQuickPlayMultiplayer } = require('@xmcl/core');
+const { spawn } = require('child_process');
+const {
+  Version,
+  generateArguments,
+  LaunchPrecheck,
+  MinecraftFolder,
+  createMinecraftProcessWatcher,
+  createQuickPlayMultiplayer,
+} = require('@xmcl/core');
 const store = require('./store');
 const installer = require('./installer');
 const auth = require('./auth');
+
+// @xmcl/core's generateArguments() doesn't know how to fill the ${clientid}/${auth_xuid}
+// template variables Minecraft's own version.json declares, so they come out as these
+// literal (unsubstituted) strings. We patch them in place after generation instead of
+// appending our own --clientId/--xuid via extraMCArgs: Minecraft's arg parser (jopt-simple)
+// throws "MultipleArgumentsForOptionException" if an option like --xuid appears twice,
+// which is exactly what appending a second pair caused.
+const XUID_PLACEHOLDER = '${auth_xuid}';
+const CLIENT_ID_PLACEHOLDER = '${clientid}';
 
 async function launchGame(onEvent) {
   const account = await auth.ensureFreshAccount();
@@ -22,7 +39,7 @@ async function launchGame(onEvent) {
     javaPath = installer.javaExecutableFor(runtimePath, javaComponent);
   }
 
-  const child = await launch({
+  const launchOptions = {
     gamePath,
     resourcePath,
     javaPath,
@@ -35,20 +52,26 @@ async function launchGame(onEvent) {
     quickPlayMultiplayer: serverIp ? createQuickPlayMultiplayer(serverIp, Number(serverPort) || 25565) : undefined,
     launcherName: 'ChevreLauncher9000',
     launcherBrand: 'ChevreLauncher9000',
-    // @xmcl/core doesn't fill the ${clientid}/${auth_xuid} template variables modern
-    // Minecraft needs to register its chat-signing certificate with Mojang — without
-    // these, the client shows "Chat disabled due to missing profile public key".
-    extraMCArgs: [
-      '--clientId', clientId,
-      ...(account.xuid ? ['--xuid', account.xuid] : []),
-    ],
+  };
+
+  const rawArgs = await generateArguments(launchOptions);
+  const args = rawArgs.map((arg) => {
+    if (arg === XUID_PLACEHOLDER) return account.xuid || '';
+    if (arg === CLIENT_ID_PLACEHOLDER) return clientId;
+    return arg;
+  });
+
+  const minecraftFolder = MinecraftFolder.from(resourcePath);
+  await Promise.all(LaunchPrecheck.DEFAULT_PRECHECKS.map((f) => f(minecraftFolder, resolved, launchOptions)));
+
+  if (!fs.existsSync(gamePath)) fs.mkdirSync(gamePath, { recursive: true });
+
+  const child = spawn(args[0], args.slice(1), {
+    cwd: gamePath,
     // Detach from the launcher's process tree so closing/restarting the launcher
     // (or Windows job-object cleanup) never takes down an in-progress game session.
-    extraExecOption: { detached: true },
+    detached: true,
   });
-  // Note: no child.unref() here — Electron's main process stays alive via its own
-  // windows regardless, and unref-ing on Windows makes libuv lose track of the
-  // child's real exit code (reported back as the 0xFFFFFFFF sentinel instead).
 
   const watcher = createMinecraftProcessWatcher(child);
   watcher.on('minecraft-window-ready', () => onEvent?.({ type: 'window-ready' }));
