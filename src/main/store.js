@@ -13,6 +13,8 @@ const DEFAULTS = {
   maxMemoryMb: 6144,
   account: null,
   encryptedSessionToken: null,
+  // Empty means "use the Java runtime the launcher installs automatically".
+  javaPath: '',
   // Stable per-install identifier Minecraft expects as --clientId (not a secret,
   // just a device/session identifier — unrelated to the Azure app client_id).
   clientId: null,
@@ -46,6 +48,7 @@ function getConfig() {
     maxMemoryMb: data.maxMemoryMb,
     account: data.account,
     clientId: data.clientId,
+    javaPath: data.javaPath,
   };
 }
 

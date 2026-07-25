@@ -3,6 +3,7 @@ const { contextBridge, ipcRenderer } = require('electron');
 contextBridge.exposeInMainWorld('chevre', {
   getConfig: () => ipcRenderer.invoke('config:get'),
   updateConfig: (partial) => ipcRenderer.invoke('config:update', partial),
+  pickJavaPath: () => ipcRenderer.invoke('config:pick-java'),
 
   tryAutoLogin: () => ipcRenderer.invoke('auth:auto-login'),
   login: () => ipcRenderer.invoke('auth:login'),

@@ -1,5 +1,5 @@
 const path = require('path');
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 
 const store = require('./store');
 const auth = require('./auth');
@@ -45,6 +45,16 @@ app.on('window-all-closed', () => {
 
 ipcMain.handle('config:get', () => store.getConfig());
 ipcMain.handle('config:update', (_e, partial) => store.updateConfig(partial));
+
+ipcMain.handle('config:pick-java', async () => {
+  const result = await dialog.showOpenDialog(mainWindow, {
+    title: 'Sélectionner javaw.exe',
+    properties: ['openFile'],
+    filters: [{ name: 'Exécutable Java', extensions: ['exe'] }, { name: 'Tous les fichiers', extensions: ['*'] }],
+  });
+  if (result.canceled || !result.filePaths[0]) return null;
+  return result.filePaths[0];
+});
 
 ipcMain.handle('auth:auto-login', () => auth.tryAutoLogin());
 ipcMain.handle('auth:login', () => auth.loginInteractive());

@@ -73,6 +73,8 @@ const els = {
   cfgServerPort: document.getElementById('cfg-server-port'),
   cfgMinMem: document.getElementById('cfg-min-mem'),
   cfgMaxMem: document.getElementById('cfg-max-mem'),
+  cfgJavaPath: document.getElementById('cfg-java-path'),
+  cfgJavaBrowse: document.getElementById('cfg-java-browse'),
 
   updateBanner: document.getElementById('update-banner'),
   updateBannerText: document.getElementById('update-banner-text'),
@@ -217,6 +219,7 @@ async function refreshSettingsForm() {
   els.cfgServerPort.value = cfg.serverPort || 25565;
   els.cfgMinMem.value = cfg.minMemoryMb || 3072;
   els.cfgMaxMem.value = cfg.maxMemoryMb || 6144;
+  els.cfgJavaPath.value = cfg.javaPath || '';
 }
 
 function wireEvents() {
@@ -293,12 +296,18 @@ function wireEvents() {
   els.settingsBtn.addEventListener('click', openSettings);
   els.settingsClose.addEventListener('click', () => els.settingsModal.classList.add('hidden'));
   els.settingsCancel.addEventListener('click', () => els.settingsModal.classList.add('hidden'));
+  els.cfgJavaBrowse.addEventListener('click', async () => {
+    const picked = await window.chevre.pickJavaPath();
+    if (picked) els.cfgJavaPath.value = picked;
+  });
+
   els.settingsSave.addEventListener('click', async () => {
     await window.chevre.updateConfig({
       serverIp: els.cfgServerIp.value.trim(),
       serverPort: Number(els.cfgServerPort.value) || 25565,
       minMemoryMb: Number(els.cfgMinMem.value) || 3072,
       maxMemoryMb: Number(els.cfgMaxMem.value) || 6144,
+      javaPath: els.cfgJavaPath.value.trim(),
     });
     els.settingsModal.classList.add('hidden');
   });

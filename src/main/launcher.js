@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { Version, launch, createMinecraftProcessWatcher, createQuickPlayMultiplayer } = require('@xmcl/core');
 const store = require('./store');
 const installer = require('./installer');
@@ -6,11 +7,20 @@ const auth = require('./auth');
 async function launchGame(onEvent) {
   const account = await auth.ensureFreshAccount();
   const { resourcePath, gamePath, runtimePath } = installer.locations();
-  const { minMemoryMb, maxMemoryMb, serverIp, serverPort, clientId } = store.getConfig();
+  const { minMemoryMb, maxMemoryMb, serverIp, serverPort, clientId, javaPath: customJavaPath } = store.getConfig();
 
   const resolved = await Version.parse(resourcePath, installer.NEOFORGE_VERSION_ID);
-  const javaComponent = (resolved.javaVersion && resolved.javaVersion.component) || 'java-runtime-delta';
-  const javaPath = installer.javaExecutableFor(runtimePath, javaComponent);
+
+  let javaPath;
+  if (customJavaPath) {
+    if (!fs.existsSync(customJavaPath)) {
+      throw new Error(`Le chemin Java personnalisé est introuvable : ${customJavaPath}`);
+    }
+    javaPath = customJavaPath;
+  } else {
+    const javaComponent = (resolved.javaVersion && resolved.javaVersion.component) || 'java-runtime-delta';
+    javaPath = installer.javaExecutableFor(runtimePath, javaComponent);
+  }
 
   const child = await launch({
     gamePath,
