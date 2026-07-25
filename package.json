@@ -59,7 +59,8 @@
       {
         "provider": "github",
         "owner": "Noystequee",
-        "repo": "chevre-launcher"
+        "repo": "chevre-launcher",
+        "draft": false
       }
     ]
   }
