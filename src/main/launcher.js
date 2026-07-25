@@ -46,7 +46,9 @@ async function launchGame(onEvent) {
     // (or Windows job-object cleanup) never takes down an in-progress game session.
     extraExecOption: { detached: true },
   });
-  child.unref();
+  // Note: no child.unref() here — Electron's main process stays alive via its own
+  // windows regardless, and unref-ing on Windows makes libuv lose track of the
+  // child's real exit code (reported back as the 0xFFFFFFFF sentinel instead).
 
   const watcher = createMinecraftProcessWatcher(child);
   watcher.on('minecraft-window-ready', () => onEvent?.({ type: 'window-ready' }));

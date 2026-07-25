@@ -183,10 +183,17 @@ function attachGameEvents() {
       els.progressLabel.textContent = '🐐 Minecraft a chèvre-marré avec succès. Amuse-toi !';
     }
     if (payload.type === 'exit' || payload.type === 'error') {
-      els.progressLabel.textContent =
-        payload.type === 'exit'
-          ? `Le jeu s'est arrêté (code ${payload.code}).`
-          : `Erreur : ${payload.message}`;
+      if (payload.type === 'exit') {
+        // On Windows, a detached child's real exit code sometimes comes back as this
+        // 0xFFFFFFFF sentinel (or null) even on a perfectly clean shutdown — don't
+        // scare players with a fake "error code" when the game just closed normally.
+        const isCleanExit = payload.code === 0 || payload.code == null || payload.code === 4294967295;
+        els.progressLabel.textContent = isCleanExit
+          ? '🐐 Le jeu a été fermé.'
+          : `Le jeu s'est arrêté avec une erreur (code ${payload.code}).`;
+      } else {
+        els.progressLabel.textContent = `Erreur : ${payload.message}`;
+      }
       els.playBtn.disabled = false;
       els.installBtn.disabled = false;
     }
