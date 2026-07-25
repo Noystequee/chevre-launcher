@@ -10,11 +10,13 @@
   "scripts": {
     "postinstall": "node scripts/fix-xmcl-packages.js",
     "start": "electron .",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "dist:publish": "electron-builder --publish always"
   },
   "dependencies": {
     "@xmcl/core": "2.16.0",
     "@xmcl/installer": "6.3.1",
+    "electron-updater": "^6.8.9",
     "msmc": "5.0.5"
   },
   "devDependencies": {
@@ -52,6 +54,13 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Noystequee",
+        "repo": "chevre-launcher"
+      }
+    ]
   }
 }

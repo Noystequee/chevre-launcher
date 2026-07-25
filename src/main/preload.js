@@ -22,4 +22,11 @@ contextBridge.exposeInMainWorld('chevre', {
     ipcRenderer.on('game:event', listener);
     return () => ipcRenderer.removeListener('game:event', listener);
   },
+
+  installUpdate: () => ipcRenderer.invoke('update:install'),
+  onUpdateEvent: (cb) => {
+    const listener = (_e, payload) => cb(payload);
+    ipcRenderer.on('update:event', listener);
+    return () => ipcRenderer.removeListener('update:event', listener);
+  },
 });

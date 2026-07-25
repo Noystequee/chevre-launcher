@@ -6,8 +6,10 @@ const auth = require('./auth');
 const installer = require('./installer');
 const modpack = require('./modpack');
 const launcherModule = require('./launcher');
+const { setupAutoUpdater } = require('./updater');
 
 let mainWindow;
+const updater = setupAutoUpdater(() => mainWindow);
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -31,6 +33,7 @@ function createWindow() {
 
 app.whenReady().then(() => {
   createWindow();
+  updater.checkForUpdates();
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
@@ -46,6 +49,8 @@ ipcMain.handle('config:update', (_e, partial) => store.updateConfig(partial));
 ipcMain.handle('auth:auto-login', () => auth.tryAutoLogin());
 ipcMain.handle('auth:login', () => auth.loginInteractive());
 ipcMain.handle('auth:logout', () => auth.logout());
+
+ipcMain.handle('update:install', () => updater.quitAndInstall());
 
 let gameRunning = false;
 let installRunning = false;

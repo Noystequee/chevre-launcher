@@ -73,6 +73,10 @@ const els = {
   cfgServerPort: document.getElementById('cfg-server-port'),
   cfgMinMem: document.getElementById('cfg-min-mem'),
   cfgMaxMem: document.getElementById('cfg-max-mem'),
+
+  updateBanner: document.getElementById('update-banner'),
+  updateBannerText: document.getElementById('update-banner-text'),
+  updateRestartBtn: document.getElementById('update-restart-btn'),
 };
 
 function startTagline() {
@@ -187,6 +191,26 @@ function attachGameEvents() {
   });
 }
 
+function attachUpdateEvents() {
+  window.chevre.onUpdateEvent((payload) => {
+    els.updateBanner.classList.remove('hidden');
+    if (payload.type === 'available') {
+      els.updateBannerText.textContent = `🐐 Mise à jour ${payload.version} trouvée, téléchargement en cours...`;
+    }
+    if (payload.type === 'progress') {
+      els.updateBannerText.textContent = `Téléchargement de la mise à jour... ${Math.round(payload.percent)}%`;
+    }
+    if (payload.type === 'downloaded') {
+      els.updateBannerText.textContent = `Mise à jour ${payload.version} prête.`;
+      els.updateRestartBtn.classList.remove('hidden');
+    }
+    if (payload.type === 'error') {
+      els.updateBanner.classList.add('hidden');
+    }
+  });
+  els.updateRestartBtn.addEventListener('click', () => window.chevre.installUpdate());
+}
+
 async function refreshSettingsForm() {
   const cfg = await window.chevre.getConfig();
   els.cfgServerIp.value = cfg.serverIp || '';
@@ -291,6 +315,7 @@ async function boot() {
   wireEvents();
   attachInstallProgress();
   attachGameEvents();
+  attachUpdateEvents();
   checkFirstRunNews();
 
   const account = await window.chevre.tryAutoLogin();
