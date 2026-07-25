@@ -32,6 +32,23 @@ npm run dist
 
 Produit un installeur NSIS dans `dist/`. Les 138 mods (`resources/modpack/`, ~340 Mo) sont embarqués via `extraResources` — l'installeur est donc volumineux mais autonome : n'importe qui peut le télécharger et rejoindre le live sans manipulation.
 
+## Publier une nouvelle version (auto-update)
+
+Le launcher a un système de mise à jour automatique via `electron-updater` + GitHub Releases (repo [Noystequee/chevre-launcher](https://github.com/Noystequee/chevre-launcher)). Pour publier un correctif :
+
+```bash
+# 1. Bump la version dans package.json
+# 2. Commit + push le code
+git add -A && git commit -m "..." && git push
+
+# 3. Build + publie en une commande
+npm run release
+```
+
+`npm run release` build localement puis publie via `gh` (nécessite `gh auth login` fait une fois). **Ne pas utiliser `electron-builder --publish always` directement** : cette version d'electron-builder a un bug de race condition qui crée deux releases GitHub dupliquées en publiant l'exe et le blockmap en parallèle. Le script `scripts/release.js` build en local (`--publish never`) puis uploade les 3 fichiers (exe, blockmap, latest.yml) en un seul appel `gh release` séquentiel, sans risque de doublon.
+
+Tous les clients déjà installés téléchargeront la mise à jour automatiquement au prochain démarrage du launcher.
+
 ## Mettre à jour les mods
 
 Si la modlist change avant le live, recopie le dossier à jour :

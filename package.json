@@ -11,7 +11,7 @@
     "postinstall": "node scripts/fix-xmcl-packages.js",
     "start": "electron .",
     "dist": "electron-builder",
-    "dist:publish": "electron-builder --publish always"
+    "release": "node scripts/release.js"
   },
   "dependencies": {
     "@xmcl/core": "2.16.0",
@@ -53,7 +53,8 @@
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "chevre-launcher-setup-${version}.${ext}"
     },
     "publish": [
       {
