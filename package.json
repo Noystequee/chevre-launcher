@@ -1,0 +1,57 @@
+{
+  "name": "chevre-launcher",
+  "productName": "CHÈVRE LAUNCHER 9000",
+  "version": "1.0.0",
+  "description": "Launcher officieux et complètement chèvre pour le live 24h de chevrejesuis",
+  "main": "src/main/main.js",
+  "author": "chevrejesuis community",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/fix-xmcl-packages.js",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@xmcl/core": "2.16.0",
+    "@xmcl/installer": "6.3.1",
+    "msmc": "5.0.5"
+  },
+  "devDependencies": {
+    "electron": "43.2.0",
+    "electron-builder": "26.15.3"
+  },
+  "overrides": {
+    "@xmcl/core": "2.16.0",
+    "@xmcl/asm": "1.0.1",
+    "@xmcl/file-transfer": "2.1.2",
+    "@xmcl/forge-site-parser": "2.0.9",
+    "@xmcl/unzip": "2.2.0",
+    "@xmcl/yauzl": "2.10.0"
+  },
+  "build": {
+    "appId": "fr.chevrejesuis.chevrelauncher",
+    "productName": "CHÈVRE LAUNCHER 9000",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/modpack",
+        "to": "modpack"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

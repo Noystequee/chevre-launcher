@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+<title>CHÈVRE LAUNCHER 9000</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <aside class="rail">
+      <img src="assets/logo.png" alt="chevrejesuis" class="rail-logo" />
+      <nav class="rail-nav">
+        <button class="rail-btn active" data-view="home" title="Accueil" aria-label="Accueil">
+          <span class="rail-icon">⌂</span>
+        </button>
+        <button class="rail-btn" id="news-nav-btn" title="News" aria-label="News">
+          <span class="rail-icon">▤</span>
+          <span class="rail-dot" id="news-dot"></span>
+        </button>
+      </nav>
+      <button class="rail-btn rail-btn-bottom" id="settings-btn" title="Paramètres" aria-label="Paramètres">
+        <span class="rail-icon">⚙</span>
+      </button>
+    </aside>
+
+    <div class="main-area">
+
+      <header class="hero-header">
+        <div class="hero-titling">
+          <p class="eyebrow">ÉDITION SPÉCIALE — LIVE 24H</p>
+          <h1 class="hero-title">CHÈVRE LAUNCHER<span class="hero-title-accent">_9000</span></h1>
+          <p class="hero-sub" id="ticker-text">chargement du chaos...</p>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">MINECRAFT 1.21.1</span>
+          <span class="tag tag-accent">NEOFORGE 21.1.241</span>
+          <span class="tag">138 MODS</span>
+        </div>
+      </header>
+
+      <div class="hero-visual" aria-hidden="true">
+        <span class="hero-watermark">🐐</span>
+      </div>
+
+      <div id="login-overlay" class="login-overlay hidden">
+        <div class="login-box cut-corner">
+          <p class="eyebrow">AUTHENTIFICATION REQUISE</p>
+          <h2>Connexion au troupeau</h2>
+          <p class="hint">Connecte ton compte Microsoft premium pour continuer.</p>
+          <button id="login-btn" class="btn btn-primary cut-corner">SE CONNECTER AVEC MICROSOFT</button>
+          <p id="login-error" class="error hidden"></p>
+        </div>
+      </div>
+
+      <footer class="action-bar">
+        <div class="profile-block" id="profile-block">
+          <span class="status-dot"></span>
+          <div class="profile-text">
+            <span class="profile-name" id="profile-name">Non connecté</span>
+            <button id="logout-btn" class="link-btn hidden">déconnexion</button>
+          </div>
+        </div>
+
+        <div class="status-block" id="install-status-block">
+          <p class="status-label" id="progress-label">Prêt à invoquer le chaos.</p>
+          <div class="progress-track hidden" id="progress-wrap">
+            <div id="progress-bar" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <button id="install-btn" class="btn btn-primary cut-corner action-btn">INSTALLER</button>
+        <button id="play-btn" class="btn btn-chaos cut-corner action-btn hidden">JOUER</button>
+      </footer>
+
+      <details id="log-details" class="log-panel hidden">
+        <summary>Journal de bord de la chèvre</summary>
+        <pre id="log-output"></pre>
+      </details>
+
+    </div>
+  </div>
+
+  <div id="news-modal" class="modal hidden">
+    <div class="modal-card news-card cut-corner">
+      <div class="modal-header">
+        <h2>▤ QUOI DE CHÈVRE</h2>
+        <button id="news-close" class="icon-btn-flat" aria-label="Fermer">✕</button>
+      </div>
+      <div class="news-list" id="news-list"></div>
+    </div>
+  </div>
+
+  <div id="settings-modal" class="modal hidden">
+    <div class="modal-card cut-corner">
+      <div class="modal-header">
+        <h2>⚙ PARAMÈTRES</h2>
+        <button id="settings-close" class="icon-btn-flat" aria-label="Fermer">✕</button>
+      </div>
+
+      <div class="row">
+        <label>IP du serveur
+          <input id="cfg-server-ip" type="text" placeholder="195.154.239.81" />
+        </label>
+        <label>Port
+          <input id="cfg-server-port" type="number" placeholder="25565" />
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Mémoire min (Mo)
+          <input id="cfg-min-mem" type="number" step="512" />
+        </label>
+        <label>Mémoire max (Mo)
+          <input id="cfg-max-mem" type="number" step="512" />
+        </label>
+      </div>
+
+      <button id="reinstall-btn" class="link-btn">Réinstaller / vérifier les fichiers</button>
+
+      <div class="modal-actions">
+        <button id="settings-cancel" class="link-btn">Annuler</button>
+        <button id="settings-save" class="btn btn-primary cut-corner">Sauvegarder</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
