@@ -24,14 +24,34 @@ function run(cmd) {
   execSync(cmd, { stdio: 'inherit', cwd: ROOT });
 }
 
+// GitHub rewrites release asset filenames on upload — whitespace runs become a
+// single '.' (e.g. "Falling Leaves-1.0.jar" -> "Falling.Leaves-1.0.jar"). The
+// manifest's `url` must point at that rewritten name, even though `file` (used
+// for the local mods/ folder) stays the real, original filename.
+function githubAssetName(file) {
+  return file.replace(/\s+/g, '.');
+}
+
 function buildManifest() {
   const files = fs.readdirSync(MODS_DIR).filter((f) => f.endsWith('.jar'));
   const mods = files.map((file) => {
     const full = path.join(MODS_DIR, file);
     const stat = fs.statSync(full);
-    return { file, sha256: sha256(full), size: stat.size, url: `${BASE_URL}/${encodeURIComponent(file)}` };
+    return {
+      file,
+      sha256: sha256(full),
+      size: stat.size,
+      url: `${BASE_URL}/${encodeURIComponent(githubAssetName(file))}`,
+    };
   });
   return { version: Date.now(), mods };
+}
+
+function fetchRealAssetNames() {
+  const out = execSync(`gh release view ${TAG} --repo ${REPO} --json assets --jq ".assets[].name"`, { cwd: ROOT })
+    .toString()
+    .trim();
+  return new Set(out ? out.split('\n') : []);
 }
 
 function loadPreviousManifest() {
@@ -88,7 +108,17 @@ function releaseExists() {
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
   run(`gh release upload ${TAG} "manifest/mods.json" --repo ${REPO} --clobber`);
 
-  console.log(`\n✅ Manifest publié (${manifest.mods.length} mods). Pense à commit + push manifest/mods.json.`);
+  // Verify every manifest URL actually resolves to a real asset on GitHub — catches
+  // any other filename-rewriting surprise beyond the known whitespace-to-dot one.
+  const realNames = fetchRealAssetNames();
+  const broken = manifest.mods.filter((m) => !realNames.has(githubAssetName(m.file)));
+  if (broken.length > 0) {
+    console.error(`\n❌ ${broken.length} mod(s) ont une URL qui ne correspond à aucun asset réel sur GitHub :`);
+    for (const m of broken) console.error(`   - ${m.file} (attendu: ${githubAssetName(m.file)})`);
+    process.exitCode = 1;
+  } else {
+    console.log(`\n✅ Manifest publié (${manifest.mods.length} mods), toutes les URLs vérifiées. Pense à commit + push manifest/mods.json.`);
+  }
 })().catch((err) => {
   console.error(err);
   process.exit(1);
