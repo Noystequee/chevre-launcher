@@ -85,6 +85,14 @@ const els = {
   updateBanner: document.getElementById('update-banner'),
   updateBannerText: document.getElementById('update-banner-text'),
   updateRestartBtn: document.getElementById('update-restart-btn'),
+
+  modsUpdateModal: document.getElementById('mods-update-modal'),
+  modsUpdateSummary: document.getElementById('mods-update-summary'),
+  modsUpdateProgressWrap: document.getElementById('mods-update-progress-wrap'),
+  modsUpdateProgressBar: document.getElementById('mods-update-progress-bar'),
+  modsUpdateProgressLabel: document.getElementById('mods-update-progress-label'),
+  modsUpdateLater: document.getElementById('mods-update-later'),
+  modsUpdateNow: document.getElementById('mods-update-now'),
 };
 
 function startTagline() {
@@ -226,6 +234,53 @@ function attachUpdateEvents() {
   els.updateRestartBtn.addEventListener('click', () => window.chevre.installUpdate());
 }
 
+function formatModsDiffSummary(diff) {
+  const parts = [];
+  if (diff.added.length) parts.push(`${diff.added.length} mod(s) ajouté(s)`);
+  if (diff.changed.length) parts.push(`${diff.changed.length} mod(s) mis à jour`);
+  if (diff.removed.length) parts.push(`${diff.removed.length} mod(s) retiré(s)`);
+  return parts.length ? parts.join(', ') + '.' : 'Le pack de mods a changé.';
+}
+
+function showModsUpdateModal(diff) {
+  els.modsUpdateSummary.textContent = formatModsDiffSummary(diff);
+  els.modsUpdateProgressWrap.classList.add('hidden');
+  els.modsUpdateProgressBar.style.width = '0%';
+  els.modsUpdateNow.disabled = false;
+  els.modsUpdateNow.classList.remove('hidden');
+  els.modsUpdateLater.classList.remove('hidden');
+  els.modsUpdateModal.classList.remove('hidden');
+}
+
+function attachModsUpdateEvents() {
+  window.chevre.onModsUpdateAvailable((diff) => showModsUpdateModal(diff));
+
+  window.chevre.onModsSyncProgress((payload) => {
+    els.modsUpdateProgressWrap.classList.remove('hidden');
+    const pct = payload.total > 0 ? Math.round((payload.done / payload.total) * 100) : 0;
+    els.modsUpdateProgressBar.style.width = `${pct}%`;
+    els.modsUpdateProgressLabel.textContent = `${payload.done}/${payload.total} — ${payload.file}`;
+  });
+
+  els.modsUpdateLater.addEventListener('click', () => {
+    els.modsUpdateModal.classList.add('hidden');
+  });
+
+  els.modsUpdateNow.addEventListener('click', async () => {
+    els.modsUpdateNow.disabled = true;
+    els.modsUpdateLater.classList.add('hidden');
+    try {
+      await window.chevre.syncMods();
+      els.modsUpdateModal.classList.add('hidden');
+      log('Mods mis à jour avec succès.');
+    } catch (err) {
+      els.modsUpdateProgressLabel.textContent = `Erreur : ${err?.message || err}`;
+      els.modsUpdateNow.disabled = false;
+      els.modsUpdateLater.classList.remove('hidden');
+    }
+  });
+}
+
 async function refreshSettingsForm() {
   const cfg = await window.chevre.getConfig();
   els.cfgServerIp.value = cfg.serverIp || '';
@@ -338,6 +393,7 @@ async function boot() {
   attachInstallProgress();
   attachGameEvents();
   attachUpdateEvents();
+  attachModsUpdateEvents();
   checkFirstRunNews();
 
   const account = await window.chevre.tryAutoLogin();

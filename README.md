@@ -51,14 +51,17 @@ Tous les clients déjà installés téléchargeront la mise à jour automatiquem
 
 ## Mettre à jour les mods
 
-Si la modlist change avant le live, recopie le dossier à jour :
+Les mods **ne sont plus embarqués dans l'installeur** — ils sont hébergés sur une GitHub Release dédiée (`mods`) qui sert de CDN, décrite par `manifest/mods.json` (nom, sha256, taille, url de chaque jar). Ça évite de devoir rebuild/republier tout le launcher (~400 Mo) à chaque ajout de mod.
 
-```bash
-robocopy "C:\chemin\vers\nouvelle\instance\mods" resources\modpack\mods /E
-robocopy "C:\chemin\vers\nouvelle\instance\config" resources\modpack\config /E
-```
+Pour ajouter, retirer ou mettre à jour un mod :
 
-Le launcher **resynchronise entièrement `mods/`** à chaque install/réinstall (les jars du pack sont toujours à jour), mais **ne touche jamais aux fichiers `config/` déjà présents** chez le joueur — seuls les nouveaux fichiers de config absents sont ajoutés, l'existant n'est jamais écrasé. `options.txt`, les saves, les waypoints Xaero, les screenshots etc. ne sont jamais touchés par le déploiement, quel que soit le nombre de réinstalls ou de mises à jour : un joueur ne perd jamais ses réglages personnels.
+1. Modifie le contenu de `resources/modpack/mods/` (ajoute/retire/remplace les jars).
+2. `npm run mods:publish` — ne réuploade que ce qui a changé (diff basé sur le sha256), régénère `manifest/mods.json`, et supprime les assets des mods retirés.
+3. `git add manifest/mods.json && git commit -m "..." && git push`
+
+Les joueurs qui ont déjà installé le launcher reçoivent un **popup automatique** ("🐐 Nouveaux mods disponibles !") au prochain lancement dès que le manifest change — pas besoin de mettre à jour le launcher lui-même pour ça, seulement pour les changements de code.
+
+Le launcher **resynchronise `mods/`** à partir du manifest à chaque install/réinstall/mise à jour (seuls les fichiers ajoutés/modifiés sont retéléchargés, les inchangés sont ignorés), mais **ne touche jamais aux fichiers `config/` déjà présents** chez le joueur — seuls les nouveaux fichiers de config absents sont ajoutés, l'existant n'est jamais écrasé. `options.txt`, les saves, les waypoints Xaero, les screenshots etc. ne sont jamais touchés par le déploiement, quel que soit le nombre de réinstalls ou de mises à jour : un joueur ne perd jamais ses réglages personnels.
 
 ## Structure du projet
 

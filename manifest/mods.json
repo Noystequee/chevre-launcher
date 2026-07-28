@@ -1,0 +1,839 @@
+{
+  "version": 1785273006763,
+  "mods": [
+    {
+      "file": "777-2.0.0d.jar",
+      "sha256": "ce3907a1cb38dbd7ef30fef97251f26b9d3b2ac3898d72ceedaef9765cdffd62",
+      "size": 1524642,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/777-2.0.0d.jar"
+    },
+    {
+      "file": "AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar",
+      "sha256": "07ee6fd24d8427ee079e2e376095b0ac92450b0153331f1575f8195e2c9cf90b",
+      "size": 84811632,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar"
+    },
+    {
+      "file": "another_furniture-neoforge-4.0.2.jar",
+      "sha256": "c61a66c73bcc5147d9983dc72c485493a612d2dbc078fcb86e2024155e34b7dd",
+      "size": 2417424,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/another_furniture-neoforge-4.0.2.jar"
+    },
+    {
+      "file": "appleskin-neoforge-mc1.21-3.0.9.jar",
+      "sha256": "38b48dd6231341c9f964ce6e42c57ec866c6cc8f72bec938390a59bafb3922df",
+      "size": 75804,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/appleskin-neoforge-mc1.21-3.0.9.jar"
+    },
+    {
+      "file": "appliedenergistics2-19.2.17.jar",
+      "sha256": "460d779a0609b81409907d9956de8f6f70a1b0912257e3e5c3c7e75ac9630e95",
+      "size": 8230896,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/appliedenergistics2-19.2.17.jar"
+    },
+    {
+      "file": "Aquaculture-1.21.1-2.7.21.jar",
+      "sha256": "45f00f9059838b2fecc988861111d8b3d4613a5f1b3688a8dbfa8655751b85bb",
+      "size": 605949,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Aquaculture-1.21.1-2.7.21.jar"
+    },
+    {
+      "file": "architectury-13.0.8-neoforge.jar",
+      "sha256": "5ec578f814e8cca87aeffa6e424032e78d9ea5ea6b603dd834c2dc13c31141ee",
+      "size": 584004,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/architectury-13.0.8-neoforge.jar"
+    },
+    {
+      "file": "artifacts-neoforge-13.2.1.jar",
+      "sha256": "4a8e1f4d5702937a707861e478829695e432286bcd9e58f5834d82c6d998eea8",
+      "size": 1030252,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/artifacts-neoforge-13.2.1.jar"
+    },
+    {
+      "file": "athena-neoforge-1.21.1-4.0.6.jar",
+      "sha256": "43699885bbce3343916d4c5c4940cf0e3f9f6f02fdeb46e8655e121b42282ec5",
+      "size": 99944,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/athena-neoforge-1.21.1-4.0.6.jar"
+    },
+    {
+      "file": "automobility-0.5.0.h+1.21.1-neoforge.jar",
+      "sha256": "222d5d46d2bce2053def8af0859f9c5fe030a2c58d3fbaf6bd28af5442f12f05",
+      "size": 1331432,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/automobility-0.5.0.h%2B1.21.1-neoforge.jar"
+    },
+    {
+      "file": "balm-neoforge-1.21.1-21.0.63.jar",
+      "sha256": "b2fb37cbd47cdbd80300c2328e42c1440cfaa9ccc8635d2867b9373792f621f5",
+      "size": 782380,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/balm-neoforge-1.21.1-21.0.63.jar"
+    },
+    {
+      "file": "beautify-neoforge-1.21.1-2.0.2.jar",
+      "sha256": "30fe272345eb016408d9144a7d33795a8bff0f33f68d9ab71805d0088b818f26",
+      "size": 932199,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/beautify-neoforge-1.21.1-2.0.2.jar"
+    },
+    {
+      "file": "bellsandwhistles-0.4.7-1.21.1.jar",
+      "sha256": "a438cf2ea3a05120e12342484f1e12ca11526fbf4195d259ce1d7df8a9b3ffca",
+      "size": 193619,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/bellsandwhistles-0.4.7-1.21.1.jar"
+    },
+    {
+      "file": "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+      "sha256": "60b548bef04a2f0e1da686ee9035c2e3d4ed0459a17d7a4836fc26af6de6b60e",
+      "size": 98641,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar"
+    },
+    {
+      "file": "bettercombat-neoforge-2.4.0+1.21.1.jar",
+      "sha256": "0446e9faa98b764ba010ac31e337d14ac96bbb2fbfeff9b599e1efd510dfde5a",
+      "size": 1045389,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/bettercombat-neoforge-2.4.0%2B1.21.1.jar"
+    },
+    {
+      "file": "BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
+      "sha256": "9f6581823c2449dde4ac1e9b4f5a7cc226c42e058e656741ab392f714f443971",
+      "size": 1575450,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/BrewinAndChewin-neoforge-4.5.0%2B1.21.1.jar"
+    },
+    {
+      "file": "camera-neoforge-1.21.1-1.0.21.jar",
+      "sha256": "2a84a2c208132eacfb2deb51d9a0903e04cac93ebc8e7932dfa381af56132974",
+      "size": 302968,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/camera-neoforge-1.21.1-1.0.21.jar"
+    },
+    {
+      "file": "carryon-neoforge-1.21.1-2.2.5.8.jar",
+      "sha256": "467a03769cb981d57f3deff07f65625849a56949e84191e4d4e11ae91d2753ee",
+      "size": 357508,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/carryon-neoforge-1.21.1-2.2.5.8.jar"
+    },
+    {
+      "file": "chipped-neoforge-1.21.1-4.0.2.jar",
+      "sha256": "18ac6fd6b30db4922ccc6ee8bea5b113f69587505b7529834f37ace506427291",
+      "size": 15020578,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/chipped-neoforge-1.21.1-4.0.2.jar"
+    },
+    {
+      "file": "Chunky-NeoForge-1.4.23.jar",
+      "sha256": "d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274",
+      "size": 340572,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Chunky-NeoForge-1.4.23.jar"
+    },
+    {
+      "file": "cloth-config-15.0.140-neoforge.jar",
+      "sha256": "65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4",
+      "size": 1163890,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/cloth-config-15.0.140-neoforge.jar"
+    },
+    {
+      "file": "Clumps-neoforge-1.21.1-19.0.0.1.jar",
+      "sha256": "b524ccdace2ef8fd19f5b2074f7de1103ac5065c52553f064c00e098346c293e",
+      "size": 18382,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Clumps-neoforge-1.21.1-19.0.0.1.jar"
+    },
+    {
+      "file": "comforts-neoforge-9.0.5+1.21.1.jar",
+      "sha256": "6b0fd35a1349107e08a45539adbde9683bb203febc43a3305f6fc4ac73e59615",
+      "size": 422658,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/comforts-neoforge-9.0.5%2B1.21.1.jar"
+    },
+    {
+      "file": "connectedglass-1.1.14-neoforge-mc1.21.jar",
+      "sha256": "e5b2a1cd8ef1b8a49a322aeccfc5cd9a53d8303613b9f30718f12a1e525d49fe",
+      "size": 819976,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/connectedglass-1.1.14-neoforge-mc1.21.jar"
+    },
+    {
+      "file": "Controlling-neoforge-1.21.1-19.0.5.jar",
+      "sha256": "cc525fb6b030d9e4d33176983f278919e17b33935e2ca568929bdfa98f2b44a0",
+      "size": 77555,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Controlling-neoforge-1.21.1-19.0.5.jar"
+    },
+    {
+      "file": "cookingforblockheads-neoforge-1.21.1-21.1.24.jar",
+      "sha256": "3dd7af93b2156b14cf279fa6da2f7a1f88a63a81d7cfe001ac63945b06e62ccd",
+      "size": 1266042,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/cookingforblockheads-neoforge-1.21.1-21.1.24.jar"
+    },
+    {
+      "file": "copycats-3.0.4+mc.1.21.1-neoforge.jar",
+      "sha256": "8480e2a62eaa625f75776831c1d8a9ef3d77d2d816fa2e67566c6ec25ba745d1",
+      "size": 1791747,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/copycats-3.0.4%2Bmc.1.21.1-neoforge.jar"
+    },
+    {
+      "file": "corn_delight-1.2.10-1.21.1.jar",
+      "sha256": "825a87e6d6b8b9daa0660a0bba0d0c2d803f8cc20013fb80c4934a1e2213c700",
+      "size": 165038,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/corn_delight-1.2.10-1.21.1.jar"
+    },
+    {
+      "file": "craftingtweaks-neoforge-1.21.1-21.1.10.jar",
+      "sha256": "f1667357c0b8d12486ea27c9fa3a8c9b77df5555bb891517b836bab77a930b28",
+      "size": 256064,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/craftingtweaks-neoforge-1.21.1-21.1.10.jar"
+    },
+    {
+      "file": "create-1.21.1-6.0.10.jar",
+      "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a",
+      "size": 19123767,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create-1.21.1-6.0.10.jar"
+    },
+    {
+      "file": "create-central-kitchen-2.5.0.jar",
+      "sha256": "ef581fb9e62ffda6bf5e1c6854847f5e53fe7dd43adb4c1a318426481468afec",
+      "size": 375492,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create-central-kitchen-2.5.0.jar"
+    },
+    {
+      "file": "create-enchantment-industry-2.4.2.jar",
+      "sha256": "81f192bb53888e01f87a82eaac2f261c93715f2221dbcf5d8a8d414f912f75ef",
+      "size": 1283517,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create-enchantment-industry-2.4.2.jar"
+    },
+    {
+      "file": "create-new-age-1.2.0+neoforge-mc1.21.1.jar",
+      "sha256": "a217ea21ccc8364e99d86777e519436bc7c94516df9737ad0103047e48a44717",
+      "size": 1644485,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create-new-age-1.2.0%2Bneoforge-mc1.21.1.jar"
+    },
+    {
+      "file": "createaddition-1.6.0.jar",
+      "sha256": "41876c3780b70365a1848994d146a73423cc19fbe86485885795d9e7d855e7e9",
+      "size": 1661802,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/createaddition-1.6.0.jar"
+    },
+    {
+      "file": "createcontraptionterminals-1.21-1.3.0.jar",
+      "sha256": "7c4efa9b10dc9684f835eebb7c7d9c3b9032587d3f848bcf6120bc7e4771eaed",
+      "size": 90967,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/createcontraptionterminals-1.21-1.3.0.jar"
+    },
+    {
+      "file": "createdeco-2.1.3.jar",
+      "sha256": "edacf1ad0bd6b9f1667d711650dc0cde604356d91caca7ca1ec428c2f9400c6e",
+      "size": 3328498,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/createdeco-2.1.3.jar"
+    },
+    {
+      "file": "createdieselgenerators-1.21.1-1.3.14.jar",
+      "sha256": "038d7f9173fe7f792b77054ab98e9543e04630825610a05b036329d30d02329c",
+      "size": 3143118,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/createdieselgenerators-1.21.1-1.3.14.jar"
+    },
+    {
+      "file": "CreateDragonsPlus-1.11.2b.jar",
+      "sha256": "9b15e464465a639de9ef5a935ae9fd94ea545904517d1428bc784a4012e0a1e2",
+      "size": 1006723,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/CreateDragonsPlus-1.11.2b.jar"
+    },
+    {
+      "file": "createstockbridge-1.21.1-0.2.0.jar",
+      "sha256": "e1ac644064fb9276d4aa529c2c3ff67ec4eb0e87b06f27f4c7cfeb1f38a0a613",
+      "size": 180413,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/createstockbridge-1.21.1-0.2.0.jar"
+    },
+    {
+      "file": "create_connected-1.3.2-mc1.21.1.jar",
+      "sha256": "90bdceac63cb0ebd5e51351e22136182b996512edef937d0635d2857b0a3f24b",
+      "size": 6779410,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create_connected-1.3.2-mc1.21.1.jar"
+    },
+    {
+      "file": "create_jetpack-forge-5.1.2.jar",
+      "sha256": "9fe5a681ea841ce9dc02e7132cd360e1c3e75314905b4ef1493e7548265d0985",
+      "size": 481239,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create_jetpack-forge-5.1.2.jar"
+    },
+    {
+      "file": "create_mobile_packages-1.21.1-0.7.6.jar",
+      "sha256": "e230eabb8c90f40c38d6527107655d9bd6fa907ce209ece7c9ed331a8362764a",
+      "size": 546326,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create_mobile_packages-1.21.1-0.7.6.jar"
+    },
+    {
+      "file": "create_power_loader-2.0.5-mc1.21.1.jar",
+      "sha256": "69fb0433dcba1597e7fbc06b2731ebd441f8ed99e20d8ec798d852d6865d1bd7",
+      "size": 442369,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/create_power_loader-2.0.5-mc1.21.1.jar"
+    },
+    {
+      "file": "CreativeCore_NEOFORGE_v2.13.41_mc1.21.1.jar",
+      "sha256": "bd4164b9ec8e21775e34a99a8d21e5280ee8cc6d3bd003a1b32dc3ada59ae887",
+      "size": 1218640,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/CreativeCore_NEOFORGE_v2.13.41_mc1.21.1.jar"
+    },
+    {
+      "file": "cristellib-neoforge-1.21.1-3.1.7.jar",
+      "sha256": "11e05dbc97bd3fe1790bd6361747240e314c1dbf40b590ea20cc691dc8396c38",
+      "size": 583525,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/cristellib-neoforge-1.21.1-3.1.7.jar"
+    },
+    {
+      "file": "crittersandcompanions-neoforge-2.6.0.jar",
+      "sha256": "245e52b63a55ebf3348d0aae7b0cc0be8002e445d036a81a2e1bac816cc2a2aa",
+      "size": 1863046,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/crittersandcompanions-neoforge-2.6.0.jar"
+    },
+    {
+      "file": "curios-neoforge-9.5.1+1.21.1.jar",
+      "sha256": "a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde",
+      "size": 410690,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/curios-neoforge-9.5.1%2B1.21.1.jar"
+    },
+    {
+      "file": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+      "sha256": "78cb67c9faeff5d1cb4da48d41e48ecc47baddaaec0f792e6edc8207aee0ab8e",
+      "size": 220193,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/dynamic-fps-3.11.4%2Bminecraft-1.21.0-neoforge.jar"
+    },
+    {
+      "file": "EasyAnvils-v21.1.0-1.21.1-NeoForge.jar",
+      "sha256": "dcd0e562710a639b4fdd60a7500dc9404c6fbd1007215a088248ce1c57ccc6dc",
+      "size": 152297,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/EasyAnvils-v21.1.0-1.21.1-NeoForge.jar"
+    },
+    {
+      "file": "EasyMagic-v21.1.4-1.21.1-NeoForge.jar",
+      "sha256": "e641a83dcd0dd1a66c545069a706349df94f5b64dc5a252944596439009a699f",
+      "size": 143992,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/EasyMagic-v21.1.4-1.21.1-NeoForge.jar"
+    },
+    {
+      "file": "embeddium-1.0.15+mc1.21.1.jar",
+      "sha256": "3aac4c4c6e82d78d8dda4c611d68c672d1061b42bb6954331e3c2e7f14c451e1",
+      "size": 1048745,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/embeddium-1.0.15%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "emi-1.1.24+1.21.1+neoforge.jar",
+      "sha256": "b68691f94f0727fc517cac2ab55bd6658d1179cc8cc715fe610b60c37469bc4c",
+      "size": 1111538,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/emi-1.1.24%2B1.21.1%2Bneoforge.jar"
+    },
+    {
+      "file": "emotecraft-for-MC1.21.1-2.4.12-neoforge.jar",
+      "sha256": "8cff63e900acd55bb39d41978cc2a70a974e326e2038c30ff20ccfde4c953a43",
+      "size": 861829,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/emotecraft-for-MC1.21.1-2.4.12-neoforge.jar"
+    },
+    {
+      "file": "ends_delight-2.6.1+neoforge.1.21.1.jar",
+      "sha256": "030593aa0957520b114c7ab36532cbf3c63c02d7d1bff86331b8bd9fc4145c4e",
+      "size": 258124,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/ends_delight-2.6.1%2Bneoforge.1.21.1.jar"
+    },
+    {
+      "file": "entityculling-neoforge-1.10.5-mc1.21.1.jar",
+      "sha256": "2eacd2bada39bf1d1ef695736646790c619c0e6cdeaf3d7e3cfc9139d26fae02",
+      "size": 1585287,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/entityculling-neoforge-1.10.5-mc1.21.1.jar"
+    },
+    {
+      "file": "ExplorersCompass-1.21.1-3.4.0-neoforge.jar",
+      "sha256": "71e7b47bd88c9c210d7c06fe5276736fc2e225e869778216537d584e6d1faf24",
+      "size": 174668,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/ExplorersCompass-1.21.1-3.4.0-neoforge.jar"
+    },
+    {
+      "file": "exposure-neoforge-1.21.1-1.9.18.jar",
+      "sha256": "674c537a99f69b2bae53521c95dae59bc5f4eb2eb15418eec0ecbaf36b53d888",
+      "size": 2192415,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/exposure-neoforge-1.21.1-1.9.18.jar"
+    },
+    {
+      "file": "Falling Leaves-1.0.jar",
+      "sha256": "0640eb55169565bf9e6e73a57eedc80469c6a6ce23283a4610262d2a03378da7",
+      "size": 15088,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Falling%20Leaves-1.0.jar"
+    },
+    {
+      "file": "FarmersDelight-1.21.1-1.3.2.jar",
+      "sha256": "8ff438d62e1fce61542945faae45975d823e04bd6e73a07a121ea05ce2f03de7",
+      "size": 3163042,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/FarmersDelight-1.21.1-1.3.2.jar"
+    },
+    {
+      "file": "FastSuite-1.21.1-6.0.7.jar",
+      "sha256": "cf4be0fb960654527d971b6848087c29cbef5fbe849ec9945a5259f75a72c354",
+      "size": 28192,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/FastSuite-1.21.1-6.0.7.jar"
+    },
+    {
+      "file": "ferritecore-7.0.3-neoforge.jar",
+      "sha256": "d87ea28262715ebff45b8a82d493e6b468e7a4521bc021df5d88302196d030a8",
+      "size": 121559,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/ferritecore-7.0.3-neoforge.jar"
+    },
+    {
+      "file": "FramedBlocks-10.6.1.jar",
+      "sha256": "3337f29e1fa3331e8740eef9c20b0750d81fd86d1057fb81012a5c4792aa3369",
+      "size": 4306703,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/FramedBlocks-10.6.1.jar"
+    },
+    {
+      "file": "functionalstorage-1.21.1-1.5.7.jar",
+      "sha256": "407fef5c4869cc81341a03dd80dfd6c128e048c965e215eda4a9cfce4c360910",
+      "size": 776635,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/functionalstorage-1.21.1-1.5.7.jar"
+    },
+    {
+      "file": "fusion-1.3.8-neoforge-mc1.21.1.jar",
+      "sha256": "a42c83f9ab99271da2545658e1c906785e64912a18073e96b7d317231bdd5363",
+      "size": 916742,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/fusion-1.3.8-neoforge-mc1.21.1.jar"
+    },
+    {
+      "file": "fzzy_config-0.7.6+1.21+neoforge.jar",
+      "sha256": "4e5cc1438087b0bc0276969e88b9ad0bdf2bcc60d6caf5fe79e18947d7a29050",
+      "size": 2369895,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/fzzy_config-0.7.6%2B1.21%2Bneoforge.jar"
+    },
+    {
+      "file": "gambling-1.0.0-neoforge-1.21.1.jar",
+      "sha256": "9d4d607ddc12549071d378a68285995efe39a7abd62c39e8795cd5ae95b029da",
+      "size": 90590,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/gambling-1.0.0-neoforge-1.21.1.jar"
+    },
+    {
+      "file": "geckolib-neoforge-1.21.1-4.9.2.jar",
+      "sha256": "5e548466af9ab6aca7a91a7c7d4dc0dc8bc385e22958aed5da0e7bebd0fa3fba",
+      "size": 630584,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/geckolib-neoforge-1.21.1-4.9.2.jar"
+    },
+    {
+      "file": "guideme-21.1.17.jar",
+      "sha256": "d012aca7275e2186aa223bf180b643164e5360d6433385fb12951f369f0b8c84",
+      "size": 9309396,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/guideme-21.1.17.jar"
+    },
+    {
+      "file": "handcrafted-neoforge-1.21.1-4.0.3.jar",
+      "sha256": "6f2a776fb28ed07d370899814e5e711fbeebe31396097d78a3b550439b364948",
+      "size": 7132842,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/handcrafted-neoforge-1.21.1-4.0.3.jar"
+    },
+    {
+      "file": "ImmediatelyFast-NeoForge-1.6.11+1.21.1.jar",
+      "sha256": "336df12f099d1a441a3e06850bea86e9c2d0c8bc022d3d9a201870a201562a04",
+      "size": 361795,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/ImmediatelyFast-NeoForge-1.6.11%2B1.21.1.jar"
+    },
+    {
+      "file": "interiors-1.21.1-neoforge-0.6.1.jar",
+      "sha256": "0d1326fb8b67623ae1c69a63b788dcdcecaf8df400c7d8e5e55ace79a5166fe5",
+      "size": 486912,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/interiors-1.21.1-neoforge-0.6.1.jar"
+    },
+    {
+      "file": "jackpot-1.0.7.jar",
+      "sha256": "e54c0c0a737925c78413cf5bcb19378c7c07d5846d0db5a0268756ca6f160ed0",
+      "size": 1448411,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/jackpot-1.0.7.jar"
+    },
+    {
+      "file": "Jade-1.21.1-NeoForge-15.10.5.jar",
+      "sha256": "067bb4b007e1d6f6b79f0afe99c91252aa825472b99a76d33a60d24442f9e92d",
+      "size": 725742,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Jade-1.21.1-NeoForge-15.10.5.jar"
+    },
+    {
+      "file": "kotlinforforge-5.12.0-all.jar",
+      "sha256": "2785a4dd6de5c6c56065fd8eb789c82771bd2ee773c30794c23160a3b2c39139",
+      "size": 7279264,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/kotlinforforge-5.12.0-all.jar"
+    },
+    {
+      "file": "letsdo-candlelight-neoforge-2.1.12.jar",
+      "sha256": "35b178c93b0089a810216145ee4d442d761aecb45a97e8ca42537e1f0eee44b5",
+      "size": 2617931,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/letsdo-candlelight-neoforge-2.1.12.jar"
+    },
+    {
+      "file": "letsdo-farm_and_charm-neoforge-1.1.22.jar",
+      "sha256": "2fe62301c96883689bee28a7eac4b05ea026990c26b51d06a124a4bd3a1b5293",
+      "size": 2580595,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/letsdo-farm_and_charm-neoforge-1.1.22.jar"
+    },
+    {
+      "file": "libIPN-neoforge-1.21.1-6.6.3.jar",
+      "sha256": "98f061ba69d31764fa10ab7810ca49062633e107a6b261ba3b66dc25ba5fef7b",
+      "size": 626146,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/libIPN-neoforge-1.21.1-6.6.3.jar"
+    },
+    {
+      "file": "lightmanscurrency-1.21-2.3.0.5.jar",
+      "sha256": "5d610dd9ca42b58039f54c92d3b05cc700e15d40b3d817ecb3ccb661d36dc761",
+      "size": 8073046,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/lightmanscurrency-1.21-2.3.0.5.jar"
+    },
+    {
+      "file": "lodestone-1.21.1-1.8.2.jar",
+      "sha256": "cc961af6a77391628378c1c838e521415fa895062b13def493d27234ca527f3e",
+      "size": 818829,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/lodestone-1.21.1-1.8.2.jar"
+    },
+    {
+      "file": "lootr-neoforge-1.21.1-1.11.37.122.jar",
+      "sha256": "fd330d69bb0740d2833ad91784ee5f8b0e4c5d8dbee379e60e93ca2d1c252fce",
+      "size": 992330,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/lootr-neoforge-1.21.1-1.11.37.122.jar"
+    },
+    {
+      "file": "mcw-bridges-3.1.2-mc1.21.1neoforge.jar",
+      "sha256": "070b817d3282760d9789b22ce13779613c8b558e02012fd5884d343175d88fd9",
+      "size": 661387,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-bridges-3.1.2-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-doors-1.1.5-mc1.21.1neoforge.jar",
+      "sha256": "87261e309f5e10c9910169d5acbba613cab3a2d2270698b0bd47e657a45b0518",
+      "size": 1190404,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-doors-1.1.5-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-furniture-3.4.1-mc1.21.1neoforge.jar",
+      "sha256": "819fda8059b210e9de8b9275c8b8e0d931054af5a5ad47771c72d9fd4ab85e88",
+      "size": 2080436,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-furniture-3.4.1-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-lights-1.1.5-mc1.21.1neoforge.jar",
+      "sha256": "b27cd68a7673874b0f6d765bdef2a022666cc07ca0e5057209a16d1a535da9e4",
+      "size": 525744,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-lights-1.1.5-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar",
+      "sha256": "e4b0e5a5b67decc2285e71f017fb4f60284796fa0838de3edeaf6b7cb0395735",
+      "size": 673871,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar",
+      "sha256": "f04b51518f75c8a7d5fe1be5589dbcb8a7b0d4f67373ca903578804d971b1286",
+      "size": 777742,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar",
+      "sha256": "8970c40ec622edd34c9b055226b403af08ab441c77303a6dc625ae18005f8184",
+      "size": 1261268,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-roofs-2.3.2-mc1.21.1neoforge.jar",
+      "sha256": "25c79def993a24b05b0f8494ee9417717d469bc000d5ed7c219b47dcc3b3e9c8",
+      "size": 1784829,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-roofs-2.3.2-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "mcw-trapdoors-1.1.5-mc1.21.1neoforge.jar",
+      "sha256": "1408d46bc2e7515b25b4da8393f8dbb3d79bcd9fb6d51fcf26fe84734c2597af",
+      "size": 572870,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mcw-trapdoors-1.1.5-mc1.21.1neoforge.jar"
+    },
+    {
+      "file": "MEconomy-1.0.5-HOTFIX-NeoForge-1.21.1.jar",
+      "sha256": "5744de702fc31448cce1e9dffbec6ffd8489354309539f8806480478d85481eb",
+      "size": 1592227,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/MEconomy-1.0.5-HOTFIX-NeoForge-1.21.1.jar"
+    },
+    {
+      "file": "mezzos_money_mod-2.0.0-neoforge-1.21.1.jar",
+      "sha256": "3731e469946dbde458cc924762cefaf17d1bf54276b767c0c644478cd89b9d40",
+      "size": 2038943,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mezzos_money_mod-2.0.0-neoforge-1.21.1.jar"
+    },
+    {
+      "file": "minersdelight-1.21.1-1.4.5.jar",
+      "sha256": "616881ef219807f24962a461afa1fe10eab7989099779b4650bbceca48213344",
+      "size": 390203,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/minersdelight-1.21.1-1.4.5.jar"
+    },
+    {
+      "file": "modernfix-neoforge-5.27.20+mc1.21.1.jar",
+      "sha256": "6f367ea4002c39e3cfe27e0a0be1008880a4b35a8482a78a437cfb9d8ee38273",
+      "size": 599474,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/modernfix-neoforge-5.27.20%2Bmc1.21.1.jar"
+    },
+    {
+      "file": "moonlight-neoforge-1.21.1-3.1.1.jar",
+      "sha256": "095a0b08d34da009b27f207fda8d4322d201e6353231a1ca2624c2350962a3a8",
+      "size": 2028566,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/moonlight-neoforge-1.21.1-3.1.1.jar"
+    },
+    {
+      "file": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "sha256": "68e6f4201c5de97b77929a7215c9552495696ca6a3bf3ae4eacc34e135f6cc8b",
+      "size": 73938,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/MouseTweaks-neoforge-mc1.21-2.26.1.jar"
+    },
+    {
+      "file": "movingelevators-1.4.12-neoforge-mc1.21.jar",
+      "sha256": "5779a8a562a5262e75ce9d168473e28bbfb6ed5ac5843cde08620613d14e679e",
+      "size": 332699,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/movingelevators-1.4.12-neoforge-mc1.21.jar"
+    },
+    {
+      "file": "mysterious_mountain_lib-1.2.15-1.21.1.jar",
+      "sha256": "d750a23aac696222984935263baeec96e95901bbeca134d8a1018d66e6e9e2d6",
+      "size": 291753,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/mysterious_mountain_lib-1.2.15-1.21.1.jar"
+    },
+    {
+      "file": "naturalist-1.0.2-neoforge-1.21.1.jar",
+      "sha256": "04616a9f136c7a8fd6f9f75e83be80af33bc54924b3ca16b0f33d19273c25e95",
+      "size": 5028168,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/naturalist-1.0.2-neoforge-1.21.1.jar"
+    },
+    {
+      "file": "NaturesCompass-1.21.1-3.4.0-neoforge.jar",
+      "sha256": "0e249ac11b2f916c5570d9679e188da652fa5664ba9cdb7be5dc9ff69497539c",
+      "size": 224657,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/NaturesCompass-1.21.1-3.4.0-neoforge.jar"
+    },
+    {
+      "file": "oceansdelight-neoforge-1.0.4-1.21.1.jar",
+      "sha256": "30fec2263f77bcd4002995d9fc127a911c964317dbd0e3c54e348954d1722d38",
+      "size": 117108,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/oceansdelight-neoforge-1.0.4-1.21.1.jar"
+    },
+    {
+      "file": "open-parties-and-claims-neoforge-1.21.1-0.27.8.jar",
+      "sha256": "82672716d98ebc4ee4d4ab71e09fd9ab4a38635ed9e67fa950cf3979a2251274",
+      "size": 1660009,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/open-parties-and-claims-neoforge-1.21.1-0.27.8.jar"
+    },
+    {
+      "file": "Placebo-1.21.1-9.9.2.jar",
+      "sha256": "1a844a5b081813b1edb82656329e54d38389ed470f6a6516a5887f5303d7daad",
+      "size": 324058,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Placebo-1.21.1-9.9.2.jar"
+    },
+    {
+      "file": "player-animation-lib-forge-2.0.4+1.21.1.jar",
+      "sha256": "dbe5de45f5cd60c0e5e47af14e6d564534a98456e973cf670cb881f6938eee92",
+      "size": 203149,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/player-animation-lib-forge-2.0.4%2B1.21.1.jar"
+    },
+    {
+      "file": "polymorph-neoforge-1.1.0+1.21.1.jar",
+      "sha256": "bec8118978adeb052de9c4eaf9a595830621d82515a764f32f9c8a4dd52ab94b",
+      "size": 174972,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/polymorph-neoforge-1.1.0%2B1.21.1.jar"
+    },
+    {
+      "file": "portfolio-1.21.1-1.5.5-neoforge.jar",
+      "sha256": "31e1abab9b4aecf526594210b37c66f6c8ad91b77b0693bf021d74853954362a",
+      "size": 900298,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/portfolio-1.21.1-1.5.5-neoforge.jar"
+    },
+    {
+      "file": "PuzzlesLib-v21.1.52-1.21.1-NeoForge.jar",
+      "sha256": "00069866c4c6bb67ee5192d1b425d46e6a1601dc598e61bd10b67ba5fa8b029c",
+      "size": 1425176,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/PuzzlesLib-v21.1.52-1.21.1-NeoForge.jar"
+    },
+    {
+      "file": "railways-0.2.1+neoforge-mc1.21.1.jar",
+      "sha256": "b7636c8b1b0352ed1a130dfe67f8bb574e2fc08803ed1cda4d3ea00505193914",
+      "size": 12118736,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/railways-0.2.1%2Bneoforge-mc1.21.1.jar"
+    },
+    {
+      "file": "rechiseled-1.2.5-neoforge-mc1.21.jar",
+      "sha256": "7bf14cf8a4bfdc4b6c990126a75da29fd2bb7559d1c05b71e29c8fd5ae044435",
+      "size": 11498611,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/rechiseled-1.2.5-neoforge-mc1.21.jar"
+    },
+    {
+      "file": "rechiseledcreate-1.1.1-neoforge-mc1.21.jar",
+      "sha256": "ba89cd5d1221621ed226cc7f1c26dc84a660cc4f6d122753052429f96d71248d",
+      "size": 983177,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/rechiseledcreate-1.1.1-neoforge-mc1.21.jar"
+    },
+    {
+      "file": "resourcefullib-neoforge-1.21-3.0.12.jar",
+      "sha256": "5e36f2c69de008dc5795f730c84ab767688f15c810944b585485349a0c911261",
+      "size": 484332,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/resourcefullib-neoforge-1.21-3.0.12.jar"
+    },
+    {
+      "file": "Searchables-neoforge-1.21.1-1.0.2.jar",
+      "sha256": "ca193f0c69033d8f709f9e073a7c1ef4ea46714e5c2f94eb23ace12781c6aa68",
+      "size": 77326,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/Searchables-neoforge-1.21.1-1.0.2.jar"
+    },
+    {
+      "file": "shoppers-1.0.0.jar",
+      "sha256": "9e03252cf27f36dfd76375397fbc1a9a31917f7642db11f14855e8620a0d3c45",
+      "size": 88184,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/shoppers-1.0.0.jar"
+    },
+    {
+      "file": "shulkerboxtooltip-neoforge-5.1.9+1.21.1.jar",
+      "sha256": "36c6ab0fd4b6e684e2d554c67d783067dced9906cfd2b75cae56dd9ede53407a",
+      "size": 381204,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/shulkerboxtooltip-neoforge-5.1.9%2B1.21.1.jar"
+    },
+    {
+      "file": "simplyswords-neoforge-1.63.0-1.21.1.jar",
+      "sha256": "4619dcf1501fc82c1a52acd4c88a466436f5c1d7d2bccc0932912a12b0bc5198",
+      "size": 12617777,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/simplyswords-neoforge-1.63.0-1.21.1.jar"
+    },
+    {
+      "file": "SimplyTooltips-neoforge-0.1.3.jar",
+      "sha256": "ea21464cfd363efe2965cdf801b82b37ecda83e93051193f4830783ead723518",
+      "size": 5320037,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/SimplyTooltips-neoforge-0.1.3.jar"
+    },
+    {
+      "file": "sliceanddice-forge-4.2.4.jar",
+      "sha256": "c3bd743a73eed3de14f6be5221fe68655cfeed0749f8f467f2ce2012ed1416bd",
+      "size": 406699,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/sliceanddice-forge-4.2.4.jar"
+    },
+    {
+      "file": "slotsmachine1.21.1-1.1.8.jar",
+      "sha256": "8788f9de1265f39c70de15bc343aaf90bcb6d18eb122f2d7a6661780500b322a",
+      "size": 105149,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/slotsmachine1.21.1-1.1.8.jar"
+    },
+    {
+      "file": "smallships-neoforge-1.21.1-2.0.0-b2.1.jar",
+      "sha256": "423d81eaeccf32088ed0b42a3a1c0976695fa5ab99c2b6b1d4c5706537fcbf62",
+      "size": 1914804,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/smallships-neoforge-1.21.1-2.0.0-b2.1.jar"
+    },
+    {
+      "file": "sophisticatedbackpacks-1.21.1-3.25.71.1997.jar",
+      "sha256": "1fd87cd3e19299d71d55aa2e8982976082bc667a344dee404f1ca3c0d76796bd",
+      "size": 1144127,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/sophisticatedbackpacks-1.21.1-3.25.71.1997.jar"
+    },
+    {
+      "file": "sophisticatedcore-1.21.1-1.4.77.2173.jar",
+      "sha256": "76a3d8d04bdce15ad2b6cd601d153d1650569e59d577369b9f8b2d28132de9f8",
+      "size": 1672527,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/sophisticatedcore-1.21.1-1.4.77.2173.jar"
+    },
+    {
+      "file": "sophisticatedstorage-1.21.1-1.5.80.1999.jar",
+      "sha256": "912addd6e8e04c4dd0fb805b72fb03d4c772f0d630720e0674987fd6c1f0118e",
+      "size": 1825788,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/sophisticatedstorage-1.21.1-1.5.80.1999.jar"
+    },
+    {
+      "file": "sound-physics-remastered-neoforge-1.21.1-1.4.10.jar",
+      "sha256": "9eeaa9defffac7e07a4d0caa803b9e5fcb88ce68e00145487cbb727dbd7b06f8",
+      "size": 199310,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/sound-physics-remastered-neoforge-1.21.1-1.4.10.jar"
+    },
+    {
+      "file": "spark-1.10.124-neoforge.jar",
+      "sha256": "647e8a81afbe414dba1df4ba15fd06c5d32d4cb544e68828405e8e074c2e16db",
+      "size": 3642581,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/spark-1.10.124-neoforge.jar"
+    },
+    {
+      "file": "StorageDrawers-neoforge-1.21.1-13.11.4.jar",
+      "sha256": "7d768aaaecbd0228c57d3a3c1fcee0c04469a42ea218925f93763ed33afe566c",
+      "size": 1131420,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/StorageDrawers-neoforge-1.21.1-13.11.4.jar"
+    },
+    {
+      "file": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "sha256": "d2ba7b839a2268e4e223457e813d11aa2476c3bf708a7bba691d8fc851778a4b",
+      "size": 207514,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar"
+    },
+    {
+      "file": "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+      "sha256": "d22b6dfea6922cb534adb9f8c5d43e4a3c27c864e512951df801cb1435a4d4d8",
+      "size": 558371,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/supermartijn642corelib-1.1.21-neoforge-mc1.21.jar"
+    },
+    {
+      "file": "supplementaries-neoforge-1.21.1-3.8.2.jar",
+      "sha256": "cad93d4cffc1882ce896e69ee9366d50a2e210a602a00a57b0ad66110668458e",
+      "size": 13438728,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/supplementaries-neoforge-1.21.1-3.8.2.jar"
+    },
+    {
+      "file": "titanium-1.21-4.0.45.jar",
+      "sha256": "d224a9bd5cfb9e921ba644b2a7a2ce1041f879a9945f80dacebd87d95888530c",
+      "size": 606801,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/titanium-1.21-4.0.45.jar"
+    },
+    {
+      "file": "toms_storage-1.21-2.3.2.jar",
+      "sha256": "34f242f60a601750cbe082870ef47bc3e45515fa55f26d4c9644e779ba1f50de",
+      "size": 848335,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/toms_storage-1.21-2.3.2.jar"
+    },
+    {
+      "file": "trading_floor-3.0.16.jar",
+      "sha256": "f0aacddb1f8f191f13b79c603e52bd49a6d1cb918078d8a3bdcb2621c88b8d40",
+      "size": 214343,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/trading_floor-3.0.16.jar"
+    },
+    {
+      "file": "trashcans-1.0.18c-neoforge-mc1.21.jar",
+      "sha256": "5d05b498f7c6a6a00deda3b4f66206a5269b69f9c031b1faf5a5e75c0f2b449a",
+      "size": 159808,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/trashcans-1.0.18c-neoforge-mc1.21.jar"
+    },
+    {
+      "file": "t_and_t-neoforge-fabric-1.13.9+1.21.1.jar",
+      "sha256": "04e3a5f6e9aa83b2f305e836ed6bceb656c7a6cae8d945415fd8d55bc2450696",
+      "size": 3597353,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/t_and_t-neoforge-fabric-1.13.9%2B1.21.1.jar"
+    },
+    {
+      "file": "voicechat-neoforge-1.21.1-2.6.21.jar",
+      "sha256": "901c4917960ce975cecc9a39c15d32c22beabc23ed3c36f0ce75df5a6cdd9366",
+      "size": 4913870,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/voicechat-neoforge-1.21.1-2.6.21.jar"
+    },
+    {
+      "file": "waystones-neoforge-1.21.1-21.1.37.jar",
+      "sha256": "f7864120e9474519140beb6f136314d0a3d9a5e8ab45b5951359e22049d0a14b",
+      "size": 1201931,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/waystones-neoforge-1.21.1-21.1.37.jar"
+    },
+    {
+      "file": "worldedit-mod-7.3.8.jar",
+      "sha256": "5e7752c97876d87411e3760bcc573cc431f43c453722e6959fa7fe54db1b01ca",
+      "size": 6222854,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/worldedit-mod-7.3.8.jar"
+    },
+    {
+      "file": "xaerominimap-neoforge-1.21.1-26.4.2.jar",
+      "sha256": "b722bcf794288f0ed51165cd1f057fc4505e20abbc723b2e17e900426e443603",
+      "size": 2185409,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/xaerominimap-neoforge-1.21.1-26.4.2.jar"
+    },
+    {
+      "file": "xaeroworldmap-neoforge-1.21.1-1.44.2.jar",
+      "sha256": "2c4089c2f9132b85749a18920d6e2098744f61fe98854fcff2e3768f2d7269fa",
+      "size": 1418918,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/xaeroworldmap-neoforge-1.21.1-1.44.2.jar"
+    },
+    {
+      "file": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+      "sha256": "b5c30321b46cfaa521645a04aff89d2804d8167a25bb23ad4b1ae8da73093a2f",
+      "size": 1118651,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/yet_another_config_lib_v3-3.8.2%2B1.21.1-neoforge.jar"
+    },
+    {
+      "file": "YungsApi-1.21.1-NeoForge-5.1.6.jar",
+      "sha256": "08e1d21690d3213a4c62de6b6cf79f3527afb2e72e0cad0e1848d46eb8f682ca",
+      "size": 388678,
+      "url": "https://github.com/Noystequee/chevre-launcher/releases/download/mods/YungsApi-1.21.1-NeoForge-5.1.6.jar"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ const path = require('path');
 const { app } = require('electron');
 const store = require('./store');
 const { buildServersDat } = require('./serversdat');
+const modsManifest = require('./modsManifest');
 
 function getBundledModpackPath() {
   if (app.isPackaged) return path.join(process.resourcesPath, 'modpack');
@@ -25,19 +26,16 @@ function copyMissingOnly(src, dest) {
   }
 }
 
-function deployModpack(gamePath, onProgress) {
-  const bundled = getBundledModpackPath();
-
-  // mods/ is pack content, not player data: always sync so mod updates/removals
-  // from a newer launcher version actually apply.
-  const modsSrc = path.join(bundled, 'mods');
-  if (fs.existsSync(modsSrc)) {
-    onProgress?.({ part: 'mods' });
-    fs.cpSync(modsSrc, path.join(gamePath, 'mods'), { recursive: true, force: true });
-  }
+// mods/ is no longer bundled in the installer — it's downloaded from the GitHub
+// "mods" release CDN via modsManifest, so the installer stays small and adding a
+// mod never requires rebuilding/republishing the whole app.
+async function deployModpack(gamePath, onProgress) {
+  onProgress?.({ part: 'mods' });
+  await modsManifest.syncMods(gamePath, (p) => onProgress?.({ part: 'mods', ...p }));
 
   // config/ can contain player-personalized settings (mod option screens, saved
   // keybinds, etc.) — only seed files that don't exist yet, never overwrite.
+  const bundled = getBundledModpackPath();
   const configSrc = path.join(bundled, 'config');
   if (fs.existsSync(configSrc)) {
     onProgress?.({ part: 'config' });

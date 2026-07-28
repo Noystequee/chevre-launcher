@@ -1,7 +1,7 @@
 {
   "name": "chevre-launcher",
   "productName": "CHÈVRE LAUNCHER 9000",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Launcher officieux et complètement chèvre pour le live 24h de chevrejesuis",
   "main": "src/main/main.js",
   "author": "chevrejesuis community",
@@ -11,7 +11,8 @@
     "postinstall": "node scripts/fix-xmcl-packages.js",
     "start": "electron .",
     "dist": "electron-builder",
-    "release": "node scripts/release.js"
+    "release": "node scripts/release.js",
+    "mods:publish": "node scripts/publish-mods.js"
   },
   "dependencies": {
     "@xmcl/core": "2.16.0",
@@ -43,8 +44,8 @@
     ],
     "extraResources": [
       {
-        "from": "resources/modpack",
-        "to": "modpack"
+        "from": "resources/modpack/config",
+        "to": "modpack/config"
       }
     ],
     "win": {

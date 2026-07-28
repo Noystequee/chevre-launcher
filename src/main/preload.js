@@ -30,4 +30,17 @@ contextBridge.exposeInMainWorld('chevre', {
     ipcRenderer.on('update:event', listener);
     return () => ipcRenderer.removeListener('update:event', listener);
   },
+
+  checkModUpdates: () => ipcRenderer.invoke('mods:check'),
+  syncMods: () => ipcRenderer.invoke('mods:sync'),
+  onModsUpdateAvailable: (cb) => {
+    const listener = (_e, diff) => cb(diff);
+    ipcRenderer.on('mods:update-available', listener);
+    return () => ipcRenderer.removeListener('mods:update-available', listener);
+  },
+  onModsSyncProgress: (cb) => {
+    const listener = (_e, payload) => cb(payload);
+    ipcRenderer.on('mods:sync-progress', listener);
+    return () => ipcRenderer.removeListener('mods:sync-progress', listener);
+  },
 });

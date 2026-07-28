@@ -5,6 +5,7 @@ const store = require('./store');
 const auth = require('./auth');
 const installer = require('./installer');
 const modpack = require('./modpack');
+const modsManifest = require('./modsManifest');
 const launcherModule = require('./launcher');
 const { setupAutoUpdater } = require('./updater');
 
@@ -34,6 +35,18 @@ function createWindow() {
 app.whenReady().then(() => {
   createWindow();
   updater.checkForUpdates();
+  // Only worth checking if there's already an installed instance to update —
+  // a fresh install already pulls the current manifest via install:run.
+  if (installer.isInstalled()) {
+    modsManifest
+      .checkForModUpdates()
+      .then(({ diff }) => {
+        if (diff.hasUpdate && mainWindow && !mainWindow.isDestroyed()) {
+          mainWindow.webContents.send('mods:update-available', diff);
+        }
+      })
+      .catch(() => {});
+  }
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
@@ -73,11 +86,31 @@ ipcMain.handle('install:run', async (event) => {
   try {
     const sender = event.sender;
     await installer.installAll((payload) => sender.send('install:progress', payload));
-    modpack.deployModpack(installer.locations().gamePath, (payload) =>
+    await modpack.deployModpack(installer.locations().gamePath, (payload) =>
       sender.send('install:progress', { phase: 'deploying-mods', ...payload })
     );
     sender.send('install:progress', { phase: 'complete' });
     return true;
+  } finally {
+    installRunning = false;
+  }
+});
+
+ipcMain.handle('mods:check', async () => {
+  const { diff } = await modsManifest.checkForModUpdates();
+  return diff;
+});
+
+ipcMain.handle('mods:sync', async (event) => {
+  if (gameRunning) throw new Error("Le jeu est en cours d'exécution : ferme Minecraft avant de mettre à jour les mods.");
+  if (installRunning) throw new Error('Une opération est déjà en cours.');
+  installRunning = true;
+  try {
+    const sender = event.sender;
+    const diff = await modsManifest.syncMods(installer.locations().gamePath, (payload) =>
+      sender.send('mods:sync-progress', payload)
+    );
+    return diff;
   } finally {
     installRunning = false;
   }
