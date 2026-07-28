@@ -1,6 +1,6 @@
 # 🐐 CHÈVRE LAUNCHER 9000
 
-Launcher officieux (Electron) pour le live 24h de **chevrejesuis**. Installe une instance complète Minecraft **1.21.1** + **NeoForge 21.1.241** + les 138 mods du modpack `Chevre2`, avec login Microsoft/Xbox officiel.
+Launcher officieux (Electron) pour le live 24h de **chevrejesuis**. Installe une instance complète Minecraft **1.21.1** + **NeoForge 21.1.241** + les 139 mods du modpack `Chevre2`, avec login Microsoft/Xbox officiel.
 
 ## Prérequis pour lancer en dev
 
@@ -30,7 +30,7 @@ Préconfigurée sur `195.154.239.81:25565` (reprise du `servers.dat` de l'instan
 npm run dist
 ```
 
-Produit un installeur NSIS dans `dist/`. Les 138 mods (`resources/modpack/`, ~340 Mo) sont embarqués via `extraResources` — l'installeur est donc volumineux mais autonome : n'importe qui peut le télécharger et rejoindre le live sans manipulation.
+Produit un installeur NSIS dans `dist/`. Les 139 mods (`resources/modpack/`, ~340 Mo) sont embarqués via `extraResources` — l'installeur est donc volumineux mais autonome : n'importe qui peut le télécharger et rejoindre le live sans manipulation.
 
 ## Publier une nouvelle version (auto-update)
 
@@ -58,7 +58,7 @@ robocopy "C:\chemin\vers\nouvelle\instance\mods" resources\modpack\mods /E
 robocopy "C:\chemin\vers\nouvelle\instance\config" resources\modpack\config /E
 ```
 
-Le launcher réécrase `mods/` et `config/` dans l'instance installée à chaque clic sur "Installer" (idempotent).
+Le launcher **resynchronise entièrement `mods/`** à chaque install/réinstall (les jars du pack sont toujours à jour), mais **ne touche jamais aux fichiers `config/` déjà présents** chez le joueur — seuls les nouveaux fichiers de config absents sont ajoutés, l'existant n'est jamais écrasé. `options.txt`, les saves, les waypoints Xaero, les screenshots etc. ne sont jamais touchés par le déploiement, quel que soit le nombre de réinstalls ou de mises à jour : un joueur ne perd jamais ses réglages personnels.
 
 ## Structure du projet
 

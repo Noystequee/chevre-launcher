@@ -1,17 +1,23 @@
-const NEWS_VERSION = 'v1';
+const NEWS_VERSION = 'v2';
 
 const NEWS = [
+  {
+    date: '1.2.0',
+    accent: 'accent-cyan',
+    title: '🧣 Curios ajouté + settings protégés',
+    body: "Ajout du mod Curios (slots d'accessoires). Et surtout : les réinstalls/mises à jour ne touchent plus jamais à tes réglages persos (options, config déjà modifiée, waypoints Xaero, saves...). Seuls les mods et les nouveaux fichiers de config sont synchronisés.",
+  },
   {
     date: '25/07',
     accent: 'accent-pink',
     title: '🐐 Bienvenue dans le chaos',
-    body: "Le launcher officieux du live 24h de chevrejesuis est en ligne. Une instance complète Minecraft 1.21.1 + NeoForge + 138 mods, prête en un clic.",
+    body: "Le launcher officieux du live 24h de chevrejesuis est en ligne. Une instance complète Minecraft 1.21.1 + NeoForge + 139 mods, prête en un clic.",
   },
   {
     date: 'PATCH',
     accent: 'accent-cyan',
     title: 'NeoForge 21.1.241',
-    body: "Instance basée sur la modlist Chevre2 : 138 mods embarqués, config incluse. Le launcher installe Minecraft, le runtime Java adapté et NeoForge automatiquement.",
+    body: "Instance basée sur la modlist Chevre2 : 139 mods embarqués, config incluse. Le launcher installe Minecraft, le runtime Java adapté et NeoForge automatiquement.",
   },
   {
     date: 'RÈGLES',
@@ -31,7 +37,7 @@ const TAGLINES = [
   "Traduction des bêlements en bytecode...",
   "Compilation du fromage de chèvre en RAM...",
   "NeoForge approuvé par le troupeau officiel",
-  "138 mods, zéro mouton toléré",
+  "139 mods, zéro mouton toléré",
   "G.O.A.T. = Greatest Of All Time, et de toutes les chèvres",
   "24h de live, 0h de sommeil, 100% chèvre",
 ];
@@ -161,7 +167,7 @@ const PHASE_LABELS = {
   java: "Invocation d'une machine à café Java...",
   'installing-neoforge': 'Greffe de NeoForge 21.1.241...',
   neoforge: 'Greffe de NeoForge 21.1.241...',
-  'deploying-mods': 'Déversement des 138 mods dans la bergerie...',
+  'deploying-mods': 'Déversement des 139 mods dans la bergerie...',
   complete: 'Chaos prêt à être déchaîné.',
 };
 
