@@ -9,6 +9,10 @@ const modsManifest = require('./modsManifest');
 const launcherModule = require('./launcher');
 const { setupAutoUpdater } = require('./updater');
 
+// The live 24h event is over — the server has been shut down for good, so the
+// launcher no longer launches the game at all. Flip back to false to reopen it.
+const SERVER_ENDED = true;
+
 let mainWindow;
 const updater = setupAutoUpdater(() => mainWindow);
 
@@ -55,6 +59,8 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
+
+ipcMain.handle('server:status', () => ({ ended: SERVER_ENDED }));
 
 ipcMain.handle('config:get', () => store.getConfig());
 ipcMain.handle('config:update', (_e, partial) => store.updateConfig(partial));
@@ -117,6 +123,7 @@ ipcMain.handle('mods:sync', async (event) => {
 });
 
 ipcMain.handle('game:play', async (event) => {
+  if (SERVER_ENDED) throw new Error("Le serveur du live est fermé. Merci d'avoir joué ! 🐐");
   if (installRunning) throw new Error("Une installation est en cours : attends qu'elle se termine avant de jouer.");
   if (gameRunning) throw new Error('Le jeu est déjà en cours de lancement ou d\'exécution.');
   gameRunning = true;

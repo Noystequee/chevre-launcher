@@ -1,6 +1,8 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('chevre', {
+  getServerStatus: () => ipcRenderer.invoke('server:status'),
+
   getConfig: () => ipcRenderer.invoke('config:get'),
   updateConfig: (partial) => ipcRenderer.invoke('config:update', partial),
   pickJavaPath: () => ipcRenderer.invoke('config:pick-java'),

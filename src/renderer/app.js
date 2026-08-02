@@ -1,3 +1,5 @@
+let serverEnded = false;
+
 const NEWS_VERSION = 'v2';
 
 const NEWS = [
@@ -93,6 +95,9 @@ const els = {
   modsUpdateProgressLabel: document.getElementById('mods-update-progress-label'),
   modsUpdateLater: document.getElementById('mods-update-later'),
   modsUpdateNow: document.getElementById('mods-update-now'),
+
+  serverEndedModal: document.getElementById('server-ended-modal'),
+  serverEndedOk: document.getElementById('server-ended-ok'),
 };
 
 function startTagline() {
@@ -151,6 +156,14 @@ function showLoggedOut() {
   els.playBtn.disabled = true;
 }
 
+function applyServerEndedButtonState() {
+  if (!serverEnded) return;
+  els.playBtn.classList.remove('hidden');
+  els.playBtn.disabled = true;
+  els.playBtn.textContent = 'SERVEUR FERMÉ';
+  els.progressLabel.textContent = "Le live est terminé, merci d'avoir joué ! 🐐";
+}
+
 async function showLoggedIn(account) {
   els.loginOverlay.classList.add('hidden');
   els.profileBlock.querySelector('.status-dot').classList.add('online');
@@ -165,6 +178,8 @@ async function showLoggedIn(account) {
   els.progressLabel.textContent = installed
     ? 'Tout est prêt. La chèvre attend.'
     : 'Prêt à invoquer le chaos.';
+
+  applyServerEndedButtonState();
 }
 
 const PHASE_LABELS = {
@@ -323,6 +338,7 @@ function wireEvents() {
       els.installBtn.classList.add('hidden');
       els.playBtn.classList.remove('hidden');
       els.playBtn.disabled = false;
+      applyServerEndedButtonState();
     } catch (err) {
       log(`ERREUR : ${err?.message || err}`);
       els.progressLabel.textContent = 'Le chaos a mal tourné, regarde le journal.';
@@ -342,6 +358,10 @@ function wireEvents() {
   });
 
   els.playBtn.addEventListener('click', async () => {
+    if (serverEnded) {
+      els.serverEndedModal.classList.remove('hidden');
+      return;
+    }
     els.playBtn.disabled = true;
     els.installBtn.disabled = true;
     els.progressLabel.textContent =
@@ -380,7 +400,9 @@ function wireEvents() {
     els.settingsModal.classList.add('hidden');
   });
 
-  for (const modal of [els.newsModal, els.settingsModal]) {
+  els.serverEndedOk.addEventListener('click', () => els.serverEndedModal.classList.add('hidden'));
+
+  for (const modal of [els.newsModal, els.settingsModal, els.serverEndedModal]) {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) modal.classList.add('hidden');
     });
@@ -395,6 +417,10 @@ async function boot() {
   attachUpdateEvents();
   attachModsUpdateEvents();
   checkFirstRunNews();
+
+  const status = await window.chevre.getServerStatus();
+  serverEnded = !!status?.ended;
+  if (serverEnded) els.serverEndedModal.classList.remove('hidden');
 
   const account = await window.chevre.tryAutoLogin();
   if (account) await showLoggedIn(account);
